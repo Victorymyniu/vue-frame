@@ -14,7 +14,7 @@ module.exports = {
   outputDir: 'dist',
   assetsDir: 'static',
   lintOnSave: false, //eslint关闭
-  productionSourceMap: false,
+  productionSourceMap: true,
   devServer: {
     port: '8080',
     open: true,
@@ -36,6 +36,7 @@ module.exports = {
     // provide the app's title in webpack's name field, so that
     // it can be accessed in index.html to inject the correct title.
     name: name,
+    devtool: 'source-map',
     resolve: {
       alias: {
         '@': resolve('src')
